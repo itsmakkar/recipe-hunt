@@ -1,5 +1,5 @@
 import { NextRequest } from "next/server";
-import { streamChat } from "@/lib/gemini";
+import { isMissingGeminiApiKeyError, streamChat } from "@/lib/gemini";
 import { loadContextTextForChat } from "@/lib/recipe-context-store";
 
 export const runtime = "nodejs";
@@ -55,14 +55,10 @@ export async function POST(req: NextRequest) {
           controller.close();
         } catch (err) {
           console.error("Stream error:", err);
-          const msg = err instanceof Error ? err.message : "Unknown error";
-          controller.enqueue(
-            new TextEncoder().encode(
-              msg.includes("GEMINI_API_KEY")
-                ? "Error: GEMINI_API_KEY is not configured."
-                : "Sorry, something went wrong. Please try again."
-            )
-          );
+          const userText = isMissingGeminiApiKeyError(err)
+            ? "Error: No Gemini API key found. Add GEMINI_API_KEY, GOOGLE_GENERATIVE_AI_API_KEY, or GOOGLE_API_KEY to .env.local (local), or Project → Settings → Environment Variables on Vercel (production). Get a key at https://aistudio.google.com/apikey"
+            : "Sorry, something went wrong. Please try again.";
+          controller.enqueue(new TextEncoder().encode(userText));
           controller.close();
         }
       },
