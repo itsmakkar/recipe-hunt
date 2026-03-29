@@ -71,8 +71,8 @@ export async function* streamChat(
     model: modelId,
     config: {
       systemInstruction: systemPrompt,
-      temperature: 0.5,
-      maxOutputTokens: 2048,
+      temperature: 0.3,
+      maxOutputTokens: 4096,
     },
     contents,
   });
