@@ -5,7 +5,7 @@ import { isMissingGeminiApiKeyError, streamChat } from "@/lib/gemini";
 import { loadContextTextForChat } from "@/lib/recipe-context-store";
 
 export const runtime = "nodejs";
-export const maxDuration = 60;
+export const maxDuration = 10; // Vercel Hobby plan limit
 export const dynamic = "force-dynamic";
 
 // Priority order: recipe/transcript files first, large social archives last
@@ -29,8 +29,9 @@ function smartTruncateContext(rawContext: string): string {
   // Sort: priority files first, then by size ascending (smaller first)
   scored.sort((a, b) => a.priority - b.priority || a.size - b.size);
 
-  // Cap total context at 90,000 chars (~22,500 tokens) — safe for gemini-2.0-flash
-  const MAX_CHARS = 90_000;
+  // Cap total context at 28,000 chars — Vercel Hobby plan has 10s timeout,
+  // so we must keep the Gemini call fast. ~7000 tokens is enough for good answers.
+  const MAX_CHARS = 28_000;
   let total = 0;
   const kept: string[] = [];
 
