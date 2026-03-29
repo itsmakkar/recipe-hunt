@@ -1,9 +1,12 @@
 import { NextRequest } from "next/server";
+import { connection } from "next/server";
+import { unstable_noStore as noStore } from "next/cache";
 import { isMissingGeminiApiKeyError, streamChat } from "@/lib/gemini";
 import { loadContextTextForChat } from "@/lib/recipe-context-store";
 
 export const runtime = "nodejs";
 export const maxDuration = 30;
+export const dynamic = "force-dynamic";
 
 function buildSystemPrompt(contextText: string): string {
   if (!contextText.trim()) {
@@ -36,6 +39,9 @@ Now answer the user's question using ONLY the above content.`;
 }
 
 export async function POST(req: NextRequest) {
+  noStore();
+  await connection();
+
   try {
     const { messages } = await req.json();
 
@@ -56,7 +62,7 @@ export async function POST(req: NextRequest) {
         } catch (err) {
           console.error("Stream error:", err);
           const userText = isMissingGeminiApiKeyError(err)
-            ? "Error: No Gemini API key found. Add GEMINI_API_KEY, GOOGLE_GENERATIVE_AI_API_KEY, or GOOGLE_API_KEY to .env.local (local), or Project → Settings → Environment Variables on Vercel (production). Get a key at https://aistudio.google.com/apikey"
+            ? "Error: No Gemini API key found at runtime. Add GEMINI_API_KEY in Vercel → Settings → Environment Variables (all targets), then Redeploy. Locally use .env.local. Key: https://aistudio.google.com/apikey"
             : "Sorry, something went wrong. Please try again.";
           controller.enqueue(new TextEncoder().encode(userText));
           controller.close();

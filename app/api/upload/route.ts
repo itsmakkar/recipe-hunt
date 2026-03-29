@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { unstable_noStore as noStore } from "next/cache";
 import {
   deleteFile,
   listFiles,
@@ -8,6 +9,7 @@ import {
 
 export const runtime = "nodejs";
 export const maxDuration = 30;
+export const dynamic = "force-dynamic";
 
 function isAllowedName(name: string): boolean {
   const lowerName = name.toLowerCase();
@@ -19,6 +21,7 @@ function isAllowedName(name: string): boolean {
 }
 
 export async function POST(req: NextRequest) {
+  noStore();
   try {
     const formData = await req.formData();
 
@@ -92,7 +95,7 @@ export async function POST(req: NextRequest) {
       persistence,
       persistenceNote:
         persistence === "local"
-          ? "Using local storage (no Firebase env). Data may reset on server restart; set FIREBASE_SERVICE_ACCOUNT on Vercel for durable storage."
+          ? "Using temporary storage (Firebase not configured). On Vercel, add FIREBASE_SERVICE_ACCOUNT with your service account JSON (not PATH only) so uploads persist in Firestore."
           : undefined,
     });
   } catch (err) {
@@ -103,6 +106,7 @@ export async function POST(req: NextRequest) {
 }
 
 export async function GET() {
+  noStore();
   try {
     const files = await listFiles();
     return NextResponse.json({
@@ -116,6 +120,7 @@ export async function GET() {
 }
 
 export async function DELETE(req: NextRequest) {
+  noStore();
   try {
     const { id } = await req.json();
     if (!id) {

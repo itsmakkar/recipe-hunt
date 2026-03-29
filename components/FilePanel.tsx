@@ -161,8 +161,8 @@ export default function FilePanel() {
 
         {persistence === "local" && (
           <p className="text-[10px] text-amber-800/80 mt-1.5 px-1 leading-snug bg-amber-100/60 rounded py-1">
-            Local storage (no Firebase). For durable cloud storage, set{" "}
-            <code className="text-[10px]">FIREBASE_SERVICE_ACCOUNT</code> in your environment.
+            Files are not persisted to the cloud yet. In Vercel, add{" "}
+            <code className="text-[10px]">FIREBASE_SERVICE_ACCOUNT</code> with your full service account JSON (a file path alone does not work on Vercel). Then redeploy.
           </p>
         )}
 
