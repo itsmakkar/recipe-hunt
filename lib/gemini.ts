@@ -64,8 +64,11 @@ export async function* streamChat(
     parts: [{ text: m.content }],
   }));
 
+  const modelId =
+    process.env.GEMINI_MODEL?.trim() || "gemini-2.0-flash";
+
   const response = await getAI().models.generateContentStream({
-    model: "gemini-2.0-flash",
+    model: modelId,
     config: {
       systemInstruction: systemPrompt,
       temperature: 0.5,
