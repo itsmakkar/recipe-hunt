@@ -1,36 +1,9 @@
 import { NextRequest } from "next/server";
 import { streamChat } from "@/lib/gemini";
-import { getFirestore } from "@/lib/firebase-admin";
+import { loadContextTextForChat } from "@/lib/recipe-context-store";
 
 export const runtime = "nodejs";
 export const maxDuration = 30;
-
-async function loadContextFiles(): Promise<string> {
-  try {
-    const db = getFirestore();
-    const snapshot = await db
-      .collection("recipe_hunter_files")
-      .orderBy("uploadedAt", "desc")
-      .get();
-
-    if (snapshot.empty) {
-      return "";
-    }
-
-    const parts: string[] = [];
-    snapshot.docs.forEach((doc) => {
-      const data = doc.data();
-      parts.push(
-        `--- FILE: ${data.filename} ---\n${data.textContent}\n--- END OF FILE ---`
-      );
-    });
-
-    return parts.join("\n\n");
-  } catch (err) {
-    console.error("Error loading context files:", err);
-    return "";
-  }
-}
 
 function buildSystemPrompt(contextText: string): string {
   if (!contextText.trim()) {
@@ -70,7 +43,7 @@ export async function POST(req: NextRequest) {
       return new Response("Messages array is required", { status: 400 });
     }
 
-    const contextText = await loadContextFiles();
+    const contextText = await loadContextTextForChat();
     const systemPrompt = buildSystemPrompt(contextText);
 
     const stream = new ReadableStream({

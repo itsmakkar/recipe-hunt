@@ -14,9 +14,9 @@ export default function FilePanel() {
   const [uploading, setUploading] = useState(false);
   const [uploadMsg, setUploadMsg] = useState<{ text: string; ok: boolean } | null>(null);
   const [loading, setLoading] = useState(true);
+  const [persistence, setPersistence] = useState<"firebase" | "local" | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
-  // Load existing files on mount
   useEffect(() => {
     fetchFiles();
   }, []);
@@ -27,6 +27,9 @@ export default function FilePanel() {
       const res = await fetch("/api/upload");
       const data = await res.json();
       setFiles(data.files || []);
+      if (data.persistence === "firebase" || data.persistence === "local") {
+        setPersistence(data.persistence);
+      }
     } catch {
       // silent
     } finally {
@@ -35,23 +38,53 @@ export default function FilePanel() {
   }
 
   async function handleUpload(e: React.ChangeEvent<HTMLInputElement>) {
-    const file = e.target.files?.[0];
-    if (!file) return;
+    const selected = e.target.files;
+    if (!selected?.length) return;
 
     setUploading(true);
     setUploadMsg(null);
 
     const formData = new FormData();
-    formData.append("file", file);
+    for (let i = 0; i < selected.length; i++) {
+      formData.append("files", selected[i]);
+    }
 
     try {
       const res = await fetch("/api/upload", { method: "POST", body: formData });
       const data = await res.json();
-      if (res.ok) {
-        setUploadMsg({ text: `✓ "${file.name}" uploaded (${data.charCount.toLocaleString()} chars)`, ok: true });
+
+      if (res.ok && Array.isArray(data.uploaded) && data.uploaded.length > 0) {
+        const n = data.uploaded.length;
+        const names = data.uploaded.map((u: { filename: string }) => u.filename).join(", ");
+        let text =
+          n === 1
+            ? `✓ "${data.uploaded[0].filename}" uploaded (${data.uploaded[0].charCount.toLocaleString()} chars)`
+            : `✓ ${n} files uploaded: ${names}`;
+
+        if (data.errors?.length) {
+          const errBits = data.errors
+            .map((e: { filename: string; error: string }) => `${e.filename}: ${e.error}`)
+            .join(" · ");
+          text += ` · Some failed: ${errBits}`;
+        }
+
+        if (data.persistenceNote) {
+          text += ` · ${data.persistenceNote}`;
+        }
+
+        setUploadMsg({
+          text,
+          ok: true,
+        });
+        if (data.persistence === "firebase" || data.persistence === "local") {
+          setPersistence(data.persistence);
+        }
         fetchFiles();
       } else {
-        setUploadMsg({ text: `✗ ${data.error}`, ok: false });
+        setUploadMsg({
+          text: `✗ ${data.error || "Upload failed"}`,
+          ok: false,
+        });
       }
     } catch {
       setUploadMsg({ text: "✗ Upload failed. Check your connection.", ok: false });
@@ -72,6 +105,9 @@ export default function FilePanel() {
       if (res.ok) {
         setFiles((prev) => prev.filter((f) => f.id !== id));
         setUploadMsg({ text: `✓ "${filename}" deleted.`, ok: true });
+      } else {
+        const data = await res.json().catch(() => ({}));
+        setUploadMsg({ text: `✗ ${data.error || "Delete failed."}`, ok: false });
       }
     } catch {
       setUploadMsg({ text: "✗ Delete failed.", ok: false });
@@ -90,13 +126,11 @@ export default function FilePanel() {
 
   return (
     <div className="flex flex-col h-full">
-      {/* Header */}
       <div className="px-4 py-3 border-b border-amber-200 bg-amber-50">
         <h2 className="font-bold text-amber-900 text-sm">📁 Context Files</h2>
         <p className="text-xs text-amber-700 mt-0.5">Bot answers only from these files</p>
       </div>
 
-      {/* Upload button */}
       <div className="px-4 py-3 border-b border-amber-100">
         <label className={`flex items-center justify-center gap-2 w-full py-2 rounded-lg text-sm font-medium cursor-pointer transition-all
           ${uploading
@@ -108,20 +142,29 @@ export default function FilePanel() {
               <span className="animate-spin">⟳</span> Uploading…
             </>
           ) : (
-            <>
-              ↑ Upload File
-            </>
+            <>↑ Upload file(s)</>
           )}
           <input
             ref={fileInputRef}
             type="file"
+            name="files"
             accept=".txt,.docx,.md"
+            multiple
             className="hidden"
             onChange={handleUpload}
             disabled={uploading}
           />
         </label>
-        <p className="text-xs text-gray-400 mt-1 text-center">TXT or DOCX only</p>
+        <p className="text-xs text-gray-400 mt-1 text-center">
+          TXT or DOCX — select multiple files at once
+        </p>
+
+        {persistence === "local" && (
+          <p className="text-[10px] text-amber-800/80 mt-1.5 px-1 leading-snug bg-amber-100/60 rounded py-1">
+            Local storage (no Firebase). For durable cloud storage, set{" "}
+            <code className="text-[10px]">FIREBASE_SERVICE_ACCOUNT</code> in your environment.
+          </p>
+        )}
 
         {uploadMsg && (
           <div className={`mt-2 text-xs px-3 py-2 rounded-lg ${uploadMsg.ok ? "bg-green-50 text-green-700" : "bg-red-50 text-red-600"}`}>
@@ -130,7 +173,6 @@ export default function FilePanel() {
         )}
       </div>
 
-      {/* File list */}
       <div className="flex-1 overflow-y-auto px-3 py-2">
         {loading ? (
           <p className="text-xs text-gray-400 text-center mt-6">Loading files…</p>
@@ -138,7 +180,7 @@ export default function FilePanel() {
           <div className="text-center mt-8 px-2">
             <div className="text-3xl mb-2">📄</div>
             <p className="text-xs text-gray-400">No files uploaded yet.</p>
-            <p className="text-xs text-gray-400 mt-1">Upload a TXT or DOCX file to get started.</p>
+            <p className="text-xs text-gray-400 mt-1">Upload TXT or DOCX files to get started.</p>
           </div>
         ) : (
           <ul className="space-y-2">
@@ -155,6 +197,7 @@ export default function FilePanel() {
                   </p>
                 </div>
                 <button
+                  type="button"
                   onClick={() => handleDelete(f.id, f.filename)}
                   className="text-gray-300 hover:text-red-400 transition-colors flex-shrink-0 text-base mt-0.5"
                   title="Delete file"
@@ -167,7 +210,6 @@ export default function FilePanel() {
         )}
       </div>
 
-      {/* Footer count */}
       {files.length > 0 && (
         <div className="px-4 py-2 border-t border-amber-100 bg-amber-50">
           <p className="text-xs text-amber-700">{files.length} file{files.length !== 1 ? "s" : ""} active as context</p>

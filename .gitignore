@@ -36,6 +36,9 @@ yarn-error.log*
 # vercel
 .vercel
 
+# local recipe context fallback (when Firebase is not configured)
+.recipe-hunter-data/
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts

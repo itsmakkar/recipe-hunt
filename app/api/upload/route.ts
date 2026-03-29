@@ -1,106 +1,99 @@
 import { NextRequest, NextResponse } from "next/server";
-import { getStorage, getFirestore } from "@/lib/firebase-admin";
-import admin from "firebase-admin";
+import {
+  deleteFile,
+  listFiles,
+  saveUploadedFile,
+  usingFirebasePersistence,
+} from "@/lib/recipe-context-store";
 
 export const runtime = "nodejs";
 export const maxDuration = 30;
 
-async function extractText(
-  buffer: Buffer,
-  filename: string,
-  mimetype: string
-): Promise<string> {
-  const lowerName = filename.toLowerCase();
-
-  if (
-    mimetype === "text/plain" ||
+function isAllowedName(name: string): boolean {
+  const lowerName = name.toLowerCase();
+  return (
     lowerName.endsWith(".txt") ||
+    lowerName.endsWith(".docx") ||
     lowerName.endsWith(".md")
-  ) {
-    return buffer.toString("utf-8");
-  }
-
-  if (
-    mimetype ===
-      "application/vnd.openxmlformats-officedocument.wordprocessingml.document" ||
-    lowerName.endsWith(".docx")
-  ) {
-    const mammoth = await import("mammoth");
-    const result = await mammoth.extractRawText({ buffer });
-    return result.value;
-  }
-
-  throw new Error(
-    `Unsupported file type. Only TXT and DOCX are supported.`
   );
 }
 
 export async function POST(req: NextRequest) {
   try {
     const formData = await req.formData();
-    const file = formData.get("file") as File | null;
 
-    if (!file) {
-      return NextResponse.json({ error: "No file provided" }, { status: 400 });
-    }
+    const fromFiles = formData.getAll("files").filter(
+      (v): v is File => v instanceof File && v.size > 0
+    );
+    const legacy = formData.get("file");
+    const singleLegacy =
+      legacy instanceof File && legacy.size > 0 ? [legacy] : [];
 
-    const lowerName = file.name.toLowerCase();
-    const isAllowed =
-      lowerName.endsWith(".txt") ||
-      lowerName.endsWith(".docx") ||
-      lowerName.endsWith(".md");
+    const fileList = fromFiles.length > 0 ? fromFiles : singleLegacy;
 
-    if (!isAllowed) {
+    if (fileList.length === 0) {
       return NextResponse.json(
-        { error: "Only TXT and DOCX files are supported." },
+        { error: "No file provided" },
         { status: 400 }
       );
     }
 
-    const arrayBuffer = await file.arrayBuffer();
-    const buffer = Buffer.from(arrayBuffer);
+    const results: Array<{
+      id: string;
+      filename: string;
+      charCount: number;
+      preview: string;
+    }> = [];
+    const errors: Array<{ filename: string; error: string }> = [];
 
-    const textContent = await extractText(buffer, file.name, file.type);
+    for (const file of fileList) {
+      if (!isAllowedName(file.name)) {
+        errors.push({
+          filename: file.name,
+          error: "Only TXT, MD, and DOCX files are supported.",
+        });
+        continue;
+      }
 
-    if (!textContent.trim()) {
-      return NextResponse.json(
-        { error: "File appears to be empty or has no readable text." },
-        { status: 400 }
-      );
+      try {
+        const arrayBuffer = await file.arrayBuffer();
+        const buffer = Buffer.from(arrayBuffer);
+        const saved = await saveUploadedFile(buffer, file.name, file.type);
+        results.push(saved);
+      } catch (err) {
+        const msg =
+          err instanceof Error ? err.message : "Upload failed for this file.";
+        errors.push({ filename: file.name, error: msg });
+      }
     }
 
-    // Save original file to Firebase Storage
-    const storage = getStorage();
-    const timestamp = Date.now();
-    const storagePath = `recipe-hunter-contexts/${timestamp}-${file.name}`;
-    const storageFile = storage.file(storagePath);
-
-    await storageFile.save(buffer, {
-      metadata: {
-        contentType: file.type || "application/octet-stream",
-        metadata: {
-          originalName: file.name,
-          uploadedAt: new Date().toISOString(),
+    if (results.length === 0 && errors.length > 0) {
+      return NextResponse.json(
+        {
+          error: errors.map((e) => `${e.filename}: ${e.error}`).join(" "),
+          errors,
         },
-      },
-    });
+        { status: 400 }
+      );
+    }
 
-    // Save metadata + extracted text to Firestore
-    const db = getFirestore();
-    const docRef = await db.collection("recipe_hunter_files").add({
-      filename: file.name,
-      storagePath,
-      textContent,
-      charCount: textContent.length,
-      uploadedAt: admin.firestore.FieldValue.serverTimestamp(),
-    });
+    const persistence = usingFirebasePersistence()
+      ? "firebase"
+      : "local";
 
     return NextResponse.json({
-      id: docRef.id,
-      filename: file.name,
-      charCount: textContent.length,
-      preview: textContent.slice(0, 200),
-      message: "File uploaded and indexed successfully.",
+      uploaded: results,
+      count: results.length,
+      errors: errors.length > 0 ? errors : undefined,
+      message:
+        results.length === 1
+          ? "File uploaded and indexed successfully."
+          : `${results.length} files uploaded and indexed successfully.`,
+      persistence,
+      persistenceNote:
+        persistence === "local"
+          ? "Using local storage (no Firebase env). Data may reset on server restart; set FIREBASE_SERVICE_ACCOUNT on Vercel for durable storage."
+          : undefined,
     });
   } catch (err) {
     console.error("Upload error:", err);
@@ -111,20 +104,11 @@ export async function POST(req: NextRequest) {
 
 export async function GET() {
   try {
-    const db = getFirestore();
-    const snapshot = await db
-      .collection("recipe_hunter_files")
-      .orderBy("uploadedAt", "desc")
-      .get();
-
-    const files = snapshot.docs.map((doc) => ({
-      id: doc.id,
-      filename: doc.data().filename,
-      charCount: doc.data().charCount,
-      uploadedAt: doc.data().uploadedAt?.toDate?.()?.toISOString() || null,
-    }));
-
-    return NextResponse.json({ files });
+    const files = await listFiles();
+    return NextResponse.json({
+      files,
+      persistence: usingFirebasePersistence() ? "firebase" : "local",
+    });
   } catch (err) {
     console.error("List files error:", err);
     return NextResponse.json({ error: "Failed to list files" }, { status: 500 });
@@ -138,24 +122,13 @@ export async function DELETE(req: NextRequest) {
       return NextResponse.json({ error: "No file id provided" }, { status: 400 });
     }
 
-    const db = getFirestore();
-    const doc = await db.collection("recipe_hunter_files").doc(id).get();
-
-    if (!doc.exists) {
-      return NextResponse.json({ error: "File not found" }, { status: 404 });
-    }
-
-    const storagePath = doc.data()?.storagePath;
-    if (storagePath) {
-      const storage = getStorage();
-      await storage.file(storagePath).delete().catch(() => {});
-    }
-
-    await db.collection("recipe_hunter_files").doc(id).delete();
+    await deleteFile(id);
 
     return NextResponse.json({ success: true });
   } catch (err) {
     console.error("Delete error:", err);
-    return NextResponse.json({ error: "Failed to delete file" }, { status: 500 });
+    const msg = err instanceof Error ? err.message : "Failed to delete file";
+    const status = msg === "File not found" ? 404 : 500;
+    return NextResponse.json({ error: msg }, { status });
   }
 }
