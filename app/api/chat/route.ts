@@ -5,40 +5,57 @@ import { isMissingGeminiApiKeyError, streamChat } from "@/lib/gemini";
 import { loadContextTextForChat } from "@/lib/recipe-context-store";
 
 export const runtime = "nodejs";
-export const maxDuration = 10; // Vercel Hobby plan limit
+export const maxDuration = 10; // Vercel Hobby plan max
 export const dynamic = "force-dynamic";
 
-// Priority order: recipe/transcript files first, large social archives last
-// This ensures the most useful content fits within the token budget
-const FILE_PRIORITY_KEYWORDS = [
-  "recipe", "transcript", "masterclass", "dosa", "master_index",
-  "benne", "mysore", "deepakks", "kitchen"
+// ─── Chef knowledge base ────────────────────────────────────────────────────
+// These are the specific chefs/channels in Rishav's knowledge base.
+// Used to build targeted web searches and give source-specific answers.
+const CHEF_CONTEXT = `
+CHEFS IN YOUR KNOWLEDGE BASE:
+1. Chef Rajasekarallwin — South Indian specialist (Benne Dosa, Idli, Sambar, Biryani)
+   YouTube: https://www.youtube.com/channel/UCbWqtHCFJTd2QPT8_keGCEQ
+   Instagram: https://www.instagram.com/chef_rajasekarallwin/
+   Training: +91 88612 90186 | +91 79758 20779
+
+2. Chef Ismail (Shuchi Ruchi / OggaraneDabbi) — South Indian breakfast & entrepreneur training
+   YouTube: search "Shuchi Ruchi Ismail" on YouTube
+   Instagram: https://www.instagram.com/shuchiruchi_/
+   Training WhatsApp: 9448804902
+
+3. CookingShooking — Indian street food & North Indian snacks
+   YouTube: search "CookingShooking" on YouTube
+
+4. Rekha — Kannada home cooking, gravies, chutneys
+   YouTube: search "Rekha cooking Kannada" on YouTube
+`.trim();
+
+// ─── Smart context truncation ────────────────────────────────────────────────
+// Prioritise actual recipe/transcript files over large social media archives.
+// Hard cap at 28k chars to stay inside Vercel Hobby 10 s timeout.
+const PRIORITY_KEYWORDS = [
+  "recipe", "transcript", "masterclass", "master_index",
+  "dosa", "benne", "mysore", "deepakks", "kitchen",
 ];
 
-function smartTruncateContext(rawContext: string): string {
-  // Split into individual file blocks
-  const fileBlocks = rawContext.split(/\n\n(?=--- FILE:)/);
+function smartTruncateContext(raw: string): string {
+  const blocks = raw.split(/\n\n(?=--- FILE:)/);
 
-  // Score each block — recipe/transcript files get higher priority
-  const scored = fileBlocks.map((block) => {
-    const nameLine = block.match(/--- FILE: ([^\n]+) ---/)?.[1]?.toLowerCase() || "";
-    const isPriority = FILE_PRIORITY_KEYWORDS.some((kw) => nameLine.includes(kw));
-    return { block, priority: isPriority ? 0 : 1, size: block.length };
+  const scored = blocks.map((block) => {
+    const name = block.match(/--- FILE: ([^\n]+) ---/)?.[1]?.toLowerCase() ?? "";
+    const priority = PRIORITY_KEYWORDS.some((kw) => name.includes(kw)) ? 0 : 1;
+    return { block, priority, size: block.length };
   });
 
-  // Sort: priority files first, then by size ascending (smaller first)
   scored.sort((a, b) => a.priority - b.priority || a.size - b.size);
 
-  // Cap total context at 28,000 chars — Vercel Hobby plan has 10s timeout,
-  // so we must keep the Gemini call fast. ~7000 tokens is enough for good answers.
   const MAX_CHARS = 28_000;
   let total = 0;
   const kept: string[] = [];
 
   for (const { block } of scored) {
     if (total + block.length > MAX_CHARS) {
-      // Add a truncation note so the bot knows there's more data
-      kept.push(`--- NOTE: Some large files were truncated to fit context limits. Core recipe files are fully included. ---`);
+      kept.push("--- NOTE: Remaining files omitted — core recipe files fully included. ---");
       break;
     }
     kept.push(block);
@@ -48,42 +65,101 @@ function smartTruncateContext(rawContext: string): string {
   return kept.join("\n\n");
 }
 
-function buildSystemPrompt(contextText: string): string {
-  if (!contextText.trim()) {
-    return `You are Recipe Hunter, a personal cooking research assistant for Rishav.
+// ─── Web browse: fetch a URL and extract plain text ─────────────────────────
+async function fetchUrlText(url: string): Promise<string> {
+  try {
+    const res = await fetch(url, {
+      headers: { "User-Agent": "Mozilla/5.0 (compatible; RecipeHunterBot/1.0)" },
+      signal: AbortSignal.timeout(4000),
+    });
+    const html = await res.text();
+    // Strip tags, collapse whitespace — rough but fast
+    const text = html
+      .replace(/<script[\s\S]*?<\/script>/gi, "")
+      .replace(/<style[\s\S]*?<\/style>/gi, "")
+      .replace(/<[^>]+>/g, " ")
+      .replace(/\s{3,}/g, "\n")
+      .trim()
+      .slice(0, 3000); // keep first 3k chars of each page
+    return text;
+  } catch {
+    return "";
+  }
+}
 
-IMPORTANT: No context files have been uploaded yet.
-Tell the user to upload their recipe/content files using the upload panel on the left.
-Do NOT answer from general knowledge.`;
+// ─── Extract relevant URLs from context files ────────────────────────────────
+// Pull YouTube / Instagram URLs from context that are relevant to the question
+function extractRelevantUrls(contextText: string, question: string): string[] {
+  const questionWords = question.toLowerCase().split(/\s+/);
+  const lines = contextText.split("\n");
+  const urls: string[] = [];
+
+  for (const line of lines) {
+    const urlMatch = line.match(/https?:\/\/[^\s"']+/);
+    if (!urlMatch) continue;
+    const url = urlMatch[0];
+    // Only YouTube and Instagram URLs
+    if (!url.includes("youtube.com") && !url.includes("instagram.com")) continue;
+    // Check if surrounding lines mention question keywords
+    const lineLower = line.toLowerCase();
+    const isRelevant = questionWords.some(
+      (word) => word.length > 3 && lineLower.includes(word)
+    );
+    if (isRelevant && !urls.includes(url)) urls.push(url);
+    if (urls.length >= 3) break; // limit to 3 URLs to stay within timeout
+  }
+
+  return urls;
+}
+
+// ─── Build system prompt ─────────────────────────────────────────────────────
+function buildSystemPrompt(contextText: string, webContent: string): string {
+  if (!contextText.trim()) {
+    return `You are Recipe Hunter, Rishav's personal restaurant cooking assistant.
+No files uploaded yet. Ask Rishav to upload recipe/context files from the left panel.
+Do NOT use general knowledge.`;
   }
 
   const context = smartTruncateContext(contextText);
+  const hasWeb = webContent.trim().length > 0;
 
-  return `You are Recipe Hunter — Rishav's personal cooking research assistant.
+  return `You are Recipe Hunter — Rishav's personal restaurant cooking research assistant.
 
-YOUR PURPOSE: Give deep, thorough, well-researched answers using ONLY the uploaded files below.
+Rishav runs a restaurant and needs PINPOINT, PROFESSIONAL advice — not generic tips.
+Your job: give him the exact techniques, ratios, and secrets that top South Indian chefs use.
 
-HOW TO ANSWER (follow this every time):
-1. READ ALL files carefully before answering — the answer may be spread across multiple files.
-2. SYNTHESIZE information from multiple files when relevant. Do not stop at the first match.
-3. Give COMPLETE answers — full ingredient lists, full steps, all relevant details found in the files.
-4. When you find a YouTube video or Instagram post relevant to the question, ALWAYS include the URL as a clickable link.
-5. If multiple recipes/approaches exist across files, compare and present all of them.
-6. Mention which file each piece of information came from.
-7. NEVER use general knowledge. If something is not in the files, say: "This specific detail isn't in your uploaded files."
-8. Format answers clearly: use headings, numbered steps, and bullet points for ingredients.
+${CHEF_CONTEXT}
 
-LINK FORMAT: Always show URLs as: [Video Title](URL) or [View post](URL)
+═══════════════════════════════════════════════════
+HOW TO ANSWER — FOLLOW THIS EVERY TIME:
+═══════════════════════════════════════════════════
+1. Search ALL uploaded files first. The answer is often in multiple files.
+2. Give EXACT details — specific quantities, exact rice types, fermentation times, oil amounts.
+   Not "add oil as needed" — say "Chef Rajasekarallwin uses butter generously on high heat".
+3. If you find a YouTube or Instagram URL relevant to the question, INCLUDE IT as a link.
+4. If multiple chefs cover the same dish, COMPARE their approaches.
+5. Flag restaurant-scale tips separately: batter ratios, batch prep, shelf life, cost tips.
+6. NEVER give generic cooking advice. If something isn't in the files${hasWeb ? " or web results" : ""}, say so clearly.
+7. Format: use ## headings, numbered steps for method, bullet points for ingredients.
+8. End with: "🔗 Related videos/posts:" and list all relevant URLs found.
 
-=== YOUR UPLOADED FILES ===
+LINK FORMAT: [Title or description](URL)
 
+═══════════════════════════════════════════════════
+YOUR UPLOADED FILES:
+═══════════════════════════════════════════════════
 ${context}
-
-=== END OF FILES ===
-
-Now thoroughly research all files above and give Rishav the best possible answer.`;
+${hasWeb ? `
+═══════════════════════════════════════════════════
+LIVE WEB CONTENT (fetched for this question):
+═══════════════════════════════════════════════════
+${webContent}
+` : ""}
+═══════════════════════════════════════════════════
+Now give Rishav the best, most specific restaurant-grade answer possible.`;
 }
 
+// ─── Main POST handler ────────────────────────────────────────────────────────
 export async function POST(req: NextRequest) {
   noStore();
   await connection();
@@ -95,8 +171,31 @@ export async function POST(req: NextRequest) {
       return new Response("Messages array is required", { status: 400 });
     }
 
+    // Get latest user question
+    const lastUserMsg = [...messages].reverse().find((m) => m.role === "user");
+    const question = lastUserMsg?.content ?? "";
+
+    // Load context files from Firebase
     const contextText = await loadContextTextForChat();
-    const systemPrompt = buildSystemPrompt(contextText);
+
+    // Browse relevant URLs from the context (parallel, fast)
+    let webContent = "";
+    if (contextText && question) {
+      const urls = extractRelevantUrls(contextText, question);
+      if (urls.length > 0) {
+        const fetched = await Promise.allSettled(urls.map(fetchUrlText));
+        const parts = fetched
+          .map((r, i) =>
+            r.status === "fulfilled" && r.value
+              ? `[Source: ${urls[i]}]\n${r.value}`
+              : ""
+          )
+          .filter(Boolean);
+        webContent = parts.join("\n\n---\n\n").slice(0, 6000);
+      }
+    }
+
+    const systemPrompt = buildSystemPrompt(contextText, webContent);
 
     const stream = new ReadableStream({
       async start(controller) {
@@ -108,7 +207,7 @@ export async function POST(req: NextRequest) {
         } catch (err) {
           console.error("Stream error:", err);
           const userText = isMissingGeminiApiKeyError(err)
-            ? "Error: No Gemini API key at runtime. In Vercel set GEMINI_API_KEY for Production (and Preview if you use it), then Redeploy. Open /api/health on your site — geminiConfigured should be true. Local: .env.local. Key: https://aistudio.google.com/apikey"
+            ? "Error: GEMINI_API_KEY not set in Vercel. Go to Vercel → Settings → Environment Variables and add it, then Redeploy."
             : "Sorry, something went wrong. Please try again.";
           controller.enqueue(new TextEncoder().encode(userText));
           controller.close();
