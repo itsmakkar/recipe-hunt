@@ -1,3 +1,4 @@
+import process from "node:process";
 import admin from "firebase-admin";
 
 let _initialized = false;
@@ -13,37 +14,44 @@ function tryParseJsonObject(s: string): Record<string, unknown> | null {
   }
 }
 
+function parseServiceAccountJson(raw: string): Record<string, unknown> | null {
+  const trimmed = raw.replace(/^\uFEFF/, "").trim();
+  return tryParseJsonObject(trimmed);
+}
+
 /**
  * Load service account JSON. Order matters on Vercel:
  * inline JSON / base64 must come first — FIREBASE_SERVICE_ACCOUNT_PATH only works
  * when that file exists on disk (local dev), not in serverless deployments.
  */
 function loadServiceAccountFromEnv(): Record<string, unknown> | null {
-  const b64 = process.env.FIREBASE_SERVICE_ACCOUNT_BASE64?.trim();
+  const env = process.env;
+
+  const b64 = env.FIREBASE_SERVICE_ACCOUNT_BASE64?.trim();
   if (b64) {
     try {
       const decoded = Buffer.from(b64, "base64").toString("utf-8");
-      const parsed = tryParseJsonObject(decoded);
+      const parsed = parseServiceAccountJson(decoded);
       if (parsed) return parsed;
     } catch {
       /* fall through */
     }
   }
 
-  const raw = process.env.FIREBASE_SERVICE_ACCOUNT?.trim();
+  const raw = env.FIREBASE_SERVICE_ACCOUNT?.trim();
   if (raw) {
-    const direct = tryParseJsonObject(raw);
-    if (direct) return direct;
+    const parsed = parseServiceAccountJson(raw);
+    if (parsed) return parsed;
     try {
       const decoded = Buffer.from(raw, "base64").toString("utf-8");
-      const parsed = tryParseJsonObject(decoded);
-      if (parsed) return parsed;
+      const fromB64 = parseServiceAccountJson(decoded);
+      if (fromB64) return fromB64;
     } catch {
       /* fall through */
     }
   }
 
-  const path = process.env.FIREBASE_SERVICE_ACCOUNT_PATH?.trim();
+  const path = env.FIREBASE_SERVICE_ACCOUNT_PATH?.trim();
   if (path) {
     try {
       // eslint-disable-next-line @typescript-eslint/no-require-imports

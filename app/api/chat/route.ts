@@ -62,7 +62,7 @@ export async function POST(req: NextRequest) {
         } catch (err) {
           console.error("Stream error:", err);
           const userText = isMissingGeminiApiKeyError(err)
-            ? "Error: No Gemini API key found at runtime. Add GEMINI_API_KEY in Vercel → Settings → Environment Variables (all targets), then Redeploy. Locally use .env.local. Key: https://aistudio.google.com/apikey"
+            ? "Error: No Gemini API key at runtime. In Vercel set GEMINI_API_KEY for Production (and Preview if you use it), then Redeploy. Open /api/health on your site — geminiConfigured should be true. Local: .env.local. Key: https://aistudio.google.com/apikey"
             : "Sorry, something went wrong. Please try again.";
           controller.enqueue(new TextEncoder().encode(userText));
           controller.close();
