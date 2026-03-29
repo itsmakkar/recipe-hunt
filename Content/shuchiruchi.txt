@@ -1,0 +1,642 @@
+[
+  {
+    "caption": "Golden, crispy, and stuffed with pure South Indian soul ✨🥞\n.\nTurn your passion for cooking into a successful restaurant business.\nSouth Indian culinary training for entrepreneurs — Next batch starts 15th Jan | Bangalore.\nDM or WhatsApp 9448804902 to join.\n\n.\n.\n#GoldenMasalaDosa #DosaLovers #SouthIndianFood #FoodReelsIndia instafood",
+    "ownerFullName": "chef Ismail. Professional culinary training",
+    "ownerUsername": "shuchiruchi_",
+    "url": "https://www.instagram.com/p/DTHpzk9jzI_/",
+    "commentsCount": 280,
+    "firstComment": "Sir location kha pr he muje bhi sikhna he",
+    "likesCount": 88957,
+    "timestamp": "2026-01-05T07:11:57.000Z"
+  },
+  {
+    "caption": "Golden, fluffy & fried to perfection… Poori magic happening! ✨🥘\n.\n\nTurn your passion for cooking into a successful restaurant business.\nSouth Indian culinary training for entrepreneurs — Next batch starts 1st April | Bangalore.\nDM or WhatsApp 9448804902 to join.\n.\n#PooriLove #IndianFoodMagic #StreetFoodIndia #FoodReels #FoodieIndia",
+    "ownerFullName": "chef Ismail. Professional culinary training",
+    "ownerUsername": "shuchiruchi_",
+    "url": "https://www.instagram.com/p/DV6Zac0j-V_/",
+    "commentsCount": 52,
+    "firstComment": "😍",
+    "likesCount": 26268,
+    "timestamp": "2026-03-15T17:02:02.000Z"
+  },
+  {
+    "caption": "Their words say it all… real skills, real passion, real results. \n.\nTurn your passion for cooking into a successful restaurant business.\nSouth Indian culinary training for entrepreneurs - Next batch starts 1st April | Bangalore.\nDM or WhatsApp 9448804902 to join.\n.\n#ChefLife #viral\n#StudentSuccess #CookingClasses #fyp",
+    "ownerFullName": "chef Ismail. Professional culinary training",
+    "ownerUsername": "shuchiruchi_",
+    "url": "https://www.instagram.com/p/DVxcztgD7py/",
+    "commentsCount": 13,
+    "firstComment": "Address pls",
+    "likesCount": 441,
+    "timestamp": "2026-03-12T05:29:59.000Z"
+  },
+  {
+    "caption": "From kitchen mastery to on-site excellence in Chennai 🍽️✨\nServing rich, aromatic Mushroom Donne Biryani crafted with precision, passion & pure flavor.\n.\n#DonneBiryani #viral #ChennaiFoodScene #ChefLifeIndia #fyp",
+    "ownerFullName": "chef Ismail. Professional culinary training",
+    "ownerUsername": "shuchiruchi_",
+    "url": "https://www.instagram.com/p/DWTOO99jS2O/",
+    "commentsCount": 11,
+    "firstComment": "🔥🔥🔥",
+    "likesCount": 401,
+    "timestamp": "2026-03-25T08:32:20.000Z"
+  },
+  {
+    "caption": "Some dishes don’t need hype… the aroma speaks for itself 🔥\n.\n\nTurn your passion for cooking into a successful restaurant business.\nSouth Indian culinary training for entrepreneurs — Next batch starts 1st April | Bangalore.\nDM or WhatsApp 9448804902 to join.\n.\n\n#GheeRice\n#viral\n#IndianFoodLovers\n#FoodieIndia\n#fyp",
+    "ownerFullName": "chef Ismail. Professional culinary training",
+    "ownerUsername": "shuchiruchi_",
+    "url": "https://www.instagram.com/p/DVsLRWsjzpx/",
+    "commentsCount": 15,
+    "firstComment": "I have seen ismail struggle those time.he truly followed his passion.gbu ismail I am happy for you",
+    "likesCount": 2461,
+    "timestamp": "2026-03-10T06:44:23.000Z"
+  },
+  {
+    "caption": "Eid Mubarak 🌙✨ Sweet, soulful & full of love — my Savige Bath is not just a dish, it’s a celebration in every bite 🤍🍴 Made with tradition, served with heart 💫.\n.\nTurn your passion for cooking into a successful restaurant business.\nSouth Indian culinary training for entrepreneurs — Next batch starts 21 st April | Bangalore.\nDM or WhatsApp 9448804902 to join.\n.\n#EidMubarak #viral #FestiveFlavours #FoodReelIndia #fyp",
+    "ownerFullName": "chef Ismail. Professional culinary training",
+    "ownerUsername": "shuchiruchi_",
+    "url": "https://www.instagram.com/p/DWF_89dj6q8/",
+    "commentsCount": 11,
+    "firstComment": "😍😍",
+    "likesCount": 1392,
+    "timestamp": "2026-03-20T05:24:47.000Z"
+  },
+  {
+    "caption": "Simple ingredients, royal taste! 🔥 This Kalyana Rasam is not just a dish… it’s pure South Indian emotion in a bowl.\n.\n\nTurn your passion for cooking into a successful restaurant business.\nSouth Indian culinary training for entrepreneurs — Next batch starts 1st April | Bangalore.\nDM or WhatsApp 9448804902 to join.\n.\n#KalyanaRasam\n#SouthIndianFood\n#AuthenticFlavours\n#FoodReelsIndia\n#RasamLove",
+    "ownerFullName": "chef Ismail. Professional culinary training",
+    "ownerUsername": "shuchiruchi_",
+    "url": "https://www.instagram.com/p/DVoKtw9D8Uv/",
+    "commentsCount": 13,
+    "firstComment": "Address please",
+    "likesCount": 862,
+    "timestamp": "2026-03-08T17:00:58.000Z"
+  },
+  {
+    "caption": "This is how legends are trained 😌🔥\nHands-on learning with crispy Poori & soulful Sagu.\n.\nTurn your passion for cooking into a successful restaurant business.\nSouth Indian culinary training for entrepreneurs — Next batch starts 1st feb | Bangalore.\nDM or WhatsApp 9448804902 to join.\n.\n#PooriSagu\n#viral \n#explorepage \n#LearnToCook\n#fyp",
+    "ownerFullName": "chef Ismail. Professional culinary training",
+    "ownerUsername": "shuchiruchi_",
+    "url": "https://www.instagram.com/p/DT-V2x6D6R_/",
+    "commentsCount": 35,
+    "firstComment": "un cvnjc gb",
+    "likesCount": 10607,
+    "timestamp": "2026-01-26T12:47:22.000Z"
+  },
+  {
+    "caption": "One bite & straight to South Indian heaven 🤤🔥\n.\nTurn your passion for cooking into a successful restaurant business.\nSouth Indian culinary training for entrepreneurs — Next batch starts 1st march Jan | Bangalore.\nDM or WhatsApp 9448804902 to join.\n.\n#viral \n#SouthIndianFlavours\n#TempleStyleTaste\n#FoodReelIndia\n#fyp",
+    "ownerFullName": "chef Ismail. Professional culinary training",
+    "ownerUsername": "shuchiruchi_",
+    "url": "https://www.instagram.com/p/DU3G2Xgj_BI/",
+    "commentsCount": 93,
+    "firstComment": "😍😍😍😍😍",
+    "likesCount": 42848,
+    "timestamp": "2026-02-17T13:42:14.000Z"
+  },
+  {
+    "caption": "Crispy outside, magic inside… Maddur Vada done right! 🔥\n.\n\nTurn your passion for cooking into a successful restaurant business.\nSouth Indian culinary training for entrepreneurs — Next batch starts 1st April | Bangalore.\nDM or WhatsApp 9448804902 to join.\n.\n#MaddurVada\n#viral\n#FoodReels\n#IndianStreetFood\n#fyp",
+    "ownerFullName": "chef Ismail. Professional culinary training",
+    "ownerUsername": "shuchiruchi_",
+    "url": "https://www.instagram.com/p/DVyWuIxD_FC/",
+    "commentsCount": 7,
+    "firstComment": "😍😍😍😁😁😁",
+    "likesCount": 741,
+    "timestamp": "2026-03-12T14:05:06.000Z"
+  },
+  {
+    "caption": "From beginner to confident cook 👨‍🍳❤️\nNothing feels better than hearing my student’s journey in their own words. This is why I love what I do!\n.\n\nTurn your passion for cooking into a successful restaurant business.\nSouth Indian culinary training for entrepreneurs — Next batch starts 1st April | Bangalore.\nDM or WhatsApp 9448804902 to join.\n.\n#CookingClasses\n#viral \n#LearnCooking\n#FoodJourney\n#fyp",
+    "ownerFullName": "chef Ismail. Professional culinary training",
+    "ownerUsername": "shuchiruchi_",
+    "url": "https://www.instagram.com/p/DV-WpOID6JG/",
+    "commentsCount": 8,
+    "firstComment": "Sir",
+    "likesCount": 357,
+    "timestamp": "2026-03-17T05:46:55.000Z"
+  },
+  {
+    "caption": "Dip it. Crush it. Repeat. 💥🍽️\n.\nTurn your passion for cooking into a successful restaurant business.\nSouth Indian culinary training for entrepreneurs — Next batch starts 1st march | Bangalore.\nDM or WhatsApp 9448804902 to join.\n.\n#IdlyVada\n#SambarLove\n#SouthIndianBreakfast\n#FoodReelIndia\n#AuthenticTaste",
+    "ownerFullName": "chef Ismail. Professional culinary training",
+    "ownerUsername": "shuchiruchi_",
+    "url": "https://www.instagram.com/p/DU4s-TNEg03/",
+    "commentsCount": 20,
+    "firstComment": "❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️😍😍😍😍😍",
+    "likesCount": 1243,
+    "timestamp": "2026-02-18T04:36:39.000Z"
+  },
+  {
+    "caption": "Not your regular dosa… this one melts hearts 🧀❤️\n.\nTurn your passion for cooking into a successful restaurant business.\nSouth Indian culinary training for entrepreneurs — Next batch starts 1st April | Bangalore.\nDM or WhatsApp 9448804902 to join.\n.\n#PizzaDosa\n#viral\n#StreetFoodIndia\n#CheeseLovers\n#fyp",
+    "ownerFullName": "chef Ismail. Professional culinary training",
+    "ownerUsername": "shuchiruchi_",
+    "url": "https://www.instagram.com/p/DU8jx38DzTf/",
+    "commentsCount": 12,
+    "firstComment": "Wow amazing 🔥❤️",
+    "likesCount": 1081,
+    "timestamp": "2026-02-19T16:34:50.000Z"
+  },
+  {
+    "caption": "One plate. Zero leftovers. That’s the power of this biryani 😋🔥\n.\n\nTurn your passion for cooking into a successful restaurant business.\nSouth Indian culinary training for entrepreneurs — Next batch starts 1st march| Bangalore.\nDM or WhatsApp 9448804902 to join.\n.\n#MushroomBiryani\n#viral\n#FoodieLife\n#HomeChef\n#fyp",
+    "ownerFullName": "chef Ismail. Professional culinary training",
+    "ownerUsername": "shuchiruchi_",
+    "url": "https://www.instagram.com/p/DUxNvwhj51D/",
+    "commentsCount": 12,
+    "firstComment": "Recipe pls sir",
+    "likesCount": 2000,
+    "timestamp": "2026-02-15T06:47:14.000Z"
+  },
+  {
+    "caption": "Tea + Maddur Vada = Perfect love story 💛\n.\nTurn your passion for cooking into a successful restaurant business.\nSouth Indian culinary training for entrepreneurs — Next batch starts 1st April | Bangalore.\nDM or WhatsApp 9448804902 to join.\n.\n#MaddurVada\n#viral\n#SouthIndianSnacks\n#FoodReelsIndia\n#fyp",
+    "ownerFullName": "chef Ismail. Professional culinary training",
+    "ownerUsername": "shuchiruchi_",
+    "url": "https://www.instagram.com/p/DVAkJP2AnhN/",
+    "commentsCount": 12,
+    "firstComment": "Super mashallah 💗❤️❤️❤️",
+    "likesCount": 1831,
+    "timestamp": "2026-02-21T05:50:42.000Z"
+  },
+  {
+    "caption": "From batter to better 👨‍🍳🔥\nMastering the art of perfect dosa – crisp outside, soft inside!\nFuture chefs in the making at Celebrity Chef Academy 💥\n.\n\nTurn your passion for cooking into a successful restaurant business.\nSouth Indian culinary training for entrepreneurs — Next batch starts 1st April | Bangalore.\nDM or WhatsApp 9448804902 to join.\n.\n#DosaTraining\n#viral\n#SouthIndianMasterpiece\n#CulinarySkills\n#fyp",
+    "ownerFullName": "chef Ismail. Professional culinary training",
+    "ownerUsername": "shuchiruchi_",
+    "url": "https://www.instagram.com/p/DU7v5J-D4R8/",
+    "commentsCount": 46,
+    "firstComment": "Details sir",
+    "likesCount": 2277,
+    "timestamp": "2026-02-19T09:06:57.000Z"
+  },
+  {
+    "caption": "From strangers to chefs 👨‍🍳❤️\n10 days. Countless recipes. One unforgettable journey.\nProud of each and every one of you. This is not goodbye… this is just the beginning. ✨🔥\n.\nTurn your passion for cooking into a successful restaurant business.\nSouth Indian culinary training for entrepreneurs — Next batch starts 1st April | Bangalore.\nDM or WhatsApp 9448804902 to join.\n.\n#CulinaryJourney #viral #ProudTeacher #CookingClass #Fyp",
+    "ownerFullName": "chef Ismail. Professional culinary training",
+    "ownerUsername": "shuchiruchi_",
+    "url": "https://www.instagram.com/p/DVQAdnrD1sf/",
+    "commentsCount": 37,
+    "firstComment": "👏👏👏👏👏",
+    "likesCount": 5452,
+    "timestamp": "2026-02-27T05:47:19.000Z"
+  },
+  {
+    "caption": "Who said mango is only for dessert? 👀🔥 \n.\nTurn your passion for cooking into a successful restaurant business.\nSouth Indian culinary training for entrepreneurs — Next batch starts 1st April | Bangalore.\nDM or WhatsApp 9448804902 to join.\n.\n#viral #fyp #mangorice #instafoodie #explore",
+    "ownerFullName": "chef Ismail. Professional culinary training",
+    "ownerUsername": "shuchiruchi_",
+    "url": "https://www.instagram.com/p/DVeGCFqDxkd/",
+    "commentsCount": 7,
+    "firstComment": "❤️❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤",
+    "likesCount": 1148,
+    "timestamp": "2026-03-04T17:07:22.000Z"
+  },
+  {
+    "caption": "Not just making chefs… creating taste experts! 👨‍🍳🔥\n.\nTurn your passion for cooking into a successful restaurant business.\nSouth Indian culinary training for entrepreneurs\n- Next batch starts 1st march | Bangalore.\nDM or WhatsApp 9448804902 to join.\n.\n#CelebrityCheflsmail #viral\n#CookingAcademy #StudentReview\n#fyp",
+    "ownerFullName": "chef Ismail. Professional culinary training",
+    "ownerUsername": "shuchiruchi_",
+    "url": "https://www.instagram.com/p/DU0jygeAs-f/",
+    "commentsCount": 17,
+    "firstComment": "Sir please fee",
+    "likesCount": 1346,
+    "timestamp": "2026-02-16T13:57:08.000Z"
+  },
+  {
+    "caption": "Boarding pass in hand, Kesari Bath in mind 😎✈️\n.\nTurn your passion for cooking into a successful restaurant business.\nSouth Indian culinary training for entrepreneurs — Next batch starts 1st April | Bangalore.\nDM or WhatsApp 9448804902 to join.\n.\n#FlightDiaries\n#BangaloreToPune\n#KesariBath\n#TravelReels\n#fyp",
+    "ownerFullName": "chef Ismail. Professional culinary training",
+    "ownerUsername": "shuchiruchi_",
+    "url": "https://www.instagram.com/p/DVIRwzfggt2/",
+    "commentsCount": 13,
+    "firstComment": "😋 😋 yummy",
+    "likesCount": 471,
+    "timestamp": "2026-02-24T05:47:00.000Z"
+  },
+  {
+    "caption": "Golden, fluffy pooris + rich, spicy sagu = pure South Indian happiness on a plate 😍🔥 One bite and you’ll feel the love, the tradition, and the flavor explosion!\n.\n.\n#PooriSagu\n#viral\n#FoodieReels\n#HomemadeGoodness\n#fyp",
+    "ownerFullName": "chef Ismail. Professional culinary training",
+    "ownerUsername": "shuchiruchi_",
+    "url": "https://www.instagram.com/p/DUnCGaUjzL7/",
+    "commentsCount": 1,
+    "firstComment": "ಸರ್ ನಿಮ್ ಕ್ಯಾಟರಿಂಗ್ ಸ್ಟೈಲ್ ತುಂಬಾ ಇಷ್ಟ ಆಯ್ತು ಸರ್",
+    "likesCount": 320,
+    "timestamp": "2026-02-11T07:56:42.000Z"
+  },
+  {
+    "caption": "Simple ingredients. Pure Karnataka soul. 😌🍜\nShavige Bath done right 💛\n.\nTurn your passion for cooking into a successful restaurant business.\nSouth Indian culinary training for entrepreneurs — Next batch starts 11th feb | Bangalore.\nDM or WhatsApp 9448804902 to join.\n.\n#ShavigeBath\n#viral\n#SouthIndianCooking\n#explore\n#fyp",
+    "ownerFullName": "chef Ismail. Professional culinary training",
+    "ownerUsername": "shuchiruchi_",
+    "url": "https://www.instagram.com/p/DUbJytRD7et/",
+    "commentsCount": 65,
+    "firstComment": "The way of your presentation is good👏",
+    "likesCount": 11427,
+    "timestamp": "2026-02-06T17:09:47.000Z"
+  },
+  {
+    "caption": "Crispy outside, soft inside – just like perfection should be 😌\n.\nTurn your passion for cooking into a successful restaurant business.\nSouth Indian culinary training for entrepreneurs — Next batch starts 11th feb | Bangalore.\nDM or WhatsApp 9448804902.\n.\n#DosaMaking\n#explore \n#FoodReelsIndia\n#CrispyDosa\n#fyp",
+    "ownerFullName": "chef Ismail. Professional culinary training",
+    "ownerUsername": "shuchiruchi_",
+    "url": "https://www.instagram.com/p/DUoJwWrE6o_/",
+    "commentsCount": 30,
+    "firstComment": "What is the fee structure please. I am from out side.",
+    "likesCount": 3267,
+    "timestamp": "2026-02-11T18:20:34.000Z"
+  },
+  {
+    "caption": "That one rasam which tastes like weddings, memories, and pure South Indian love 💛✨\n.\n.\nTurn your passion for cooking into a successful restaurant business.\n.\nSouth Indian culinary training for entrepreneurs — Next batch starts 11th FEB | Bangalore.\nDM or WhatsApp 9448804902 to join.\n.\n#KalyanaRasam \n#viral \n#TempleStyleCooking \n#fyp \n#explore",
+    "ownerFullName": "chef Ismail. Professional culinary training",
+    "ownerUsername": "shuchiruchi_",
+    "url": "https://www.instagram.com/p/DUYru48kwpR/",
+    "commentsCount": 16,
+    "firstComment": "Hi sir pls note  ingredients  rasam recipe",
+    "likesCount": 1592,
+    "timestamp": "2026-02-05T18:07:03.000Z"
+  },
+  {
+    "caption": "From batter science to perfect spread,\nfrom crisp colour to high-speed service —\nthis is real dosa training inside a real kitchen.\n.\nTurn your passion for cooking into a successful restaurant business.\nSouth Indian culinary training for entrepreneurs — Next batch starts 1st march | Bangalore.\nDM or WhatsApp 9448804902 to join.\n.\n#DosaTraining\n#viral\n#SouthIndianCooking\n#ProfessionalCooking\n#fyp",
+    "ownerFullName": "chef Ismail. Professional culinary training",
+    "ownerUsername": "shuchiruchi_",
+    "url": "https://www.instagram.com/p/DUlfOgoAf_z/",
+    "commentsCount": 30,
+    "firstComment": "Sir ಹಸಿದವರಿಗೆ ಕೊಡಿ ಆ ದೇವರ ಆಶೀರ್ವಾದ ಸದಾ ನಿಮ್ಮ ಮೇಲೆ ಇರುತ್ತೆ 🙏🙏",
+    "likesCount": 2693,
+    "timestamp": "2026-02-10T17:33:07.000Z"
+  },
+  {
+    "caption": "When fragrant ghee rice meets rich kurma, every bite feels like a celebration 🤍🔥 Pure South Indian comfort on a plate!\n.\nTurn your passion for cooking into a successful restaurant business.\nSouth Indian culinary training for entrepreneurs — Next batch starts 11th feb | Bangalore.\nDM or WhatsApp 9448804902 to join.\n.\n#GheeRiceLove\n#viral\n#SouthIndianFlavours\n#fyp\n#ComfortFoodVibes",
+    "ownerFullName": "chef Ismail. Professional culinary training",
+    "ownerUsername": "shuchiruchi_",
+    "url": "https://www.instagram.com/p/DUfY4Y3j3MA/",
+    "commentsCount": 8,
+    "firstComment": "Looks so yummy. My favorite dish",
+    "likesCount": 1147,
+    "timestamp": "2026-02-08T08:42:53.000Z"
+  },
+  {
+    "caption": "Turning a humble cauliflower into a masterpiece 🥦✨ Simple ingredients, pure skill, unforgettable taste.\n.\nTurn your passion for cooking into a successful restaurant business.\nSouth Indian culinary training for entrepreneurs — Next batch starts 11th feb | Bangalore.\nDM or WhatsApp 9448804902 to join.\n.\n#GobiRecipe\n#viral\n#CookingClass\n#HomeChefMagic\n#fyp",
+    "ownerFullName": "chef Ismail. Professional culinary training",
+    "ownerUsername": "shuchiruchi_",
+    "url": "https://www.instagram.com/p/DUryF-QDy3W/",
+    "commentsCount": 4,
+    "firstComment": "❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️",
+    "likesCount": 676,
+    "timestamp": "2026-02-13T04:10:18.000Z"
+  },
+  {
+    "caption": "From strangers to family… from beginners to confident cooks 👩‍🍳👨‍🍳❤️\nProud of this amazing batch — last day but memories forever ✨\nUntil we meet again… keep cooking and shining 🔥\n.\nTurn your passion for cooking into a successful restaurant business.\nSouth Indian culinary training for entrepreneurs — Next batch starts 11th feb | Bangalore.\nDM or WhatsApp 9448804902 to join.\n.\n#CookingClassMemories\n#viral\n#BatchCompletion\n#FutureChefs\n#fyp",
+    "ownerFullName": "chef Ismail. Professional culinary training",
+    "ownerUsername": "shuchiruchi_",
+    "url": "https://www.instagram.com/p/DUtEiQOj398/",
+    "commentsCount": 8,
+    "firstComment": "👌👌👌",
+    "likesCount": 481,
+    "timestamp": "2026-02-13T16:11:36.000Z"
+  },
+  {
+    "caption": "When students speak, our work speaks louder ❤️👩‍🍳\nReal reviews. Real learning. Real results.\n.\nTurn your passion for cooking into a successful restaurant business.\nSouth Indian culinary training for entrepreneurs — Next batch starts 1st march | Bangalore.\nDM or WhatsApp 9448804902 to join.\n.\n#StudentTestimony\n#viral \n#CookingClassLife\n#fyp",
+    "ownerFullName": "chef Ismail. Professional culinary training",
+    "ownerUsername": "shuchiruchi_",
+    "url": "https://www.instagram.com/p/DUlydMGkyfQ/",
+    "commentsCount": 17,
+    "firstComment": "👏👏❤️",
+    "likesCount": 844,
+    "timestamp": "2026-02-10T20:19:08.000Z"
+  },
+  {
+    "caption": "Kesari bath color bright, upit taste tight 😌🔥\n.\n\nTurn your passion for cooking into a successful restaurant business.\nSouth Indian culinary training for entrepreneurs — Next batch starts 1st march | Bangalore.\nDM or WhatsApp 9448804902 to join.\n.\n#Upit\n#viral \n#NammaKarnataka\n#KannadaReels\n#fyp",
+    "ownerFullName": "chef Ismail. Professional culinary training",
+    "ownerUsername": "shuchiruchi_",
+    "url": "https://www.instagram.com/p/DUuqOMYDwSD/",
+    "commentsCount": 19,
+    "firstComment": "W7",
+    "likesCount": 1693,
+    "timestamp": "2026-02-14T07:01:18.000Z"
+  },
+  {
+    "caption": "Not my words… my students’ smiles say it all 🥹✨\nFrom beginner to confident cook!\n.\nTurn your passion for cooking into a successful restaurant business.\nSouth Indian culinary training for entrepreneurs — Next batch starts 11th feb | Bangalore.\nDM or WhatsApp 9448804902 to join.\n.\n#StudentTestimony\n#viral\n#CookingClassLife\n#fyp",
+    "ownerFullName": "chef Ismail. Professional culinary training",
+    "ownerUsername": "shuchiruchi_",
+    "url": "https://www.instagram.com/p/DUitRLUj9bW/",
+    "commentsCount": 9,
+    "firstComment": "❤️❤️🔥🔥🔥sir i want to join ur classes",
+    "likesCount": 393,
+    "timestamp": "2026-02-09T15:51:16.000Z"
+  },
+  {
+    "caption": "Seeing my students grow and speak from the heart is the biggest reward for a teacher. Grateful for moments like this ❤️👨‍🍳\n.\n\nTurn your passion for cooking into a successful restaurant business.\nSouth Indian culinary training for entrepreneurs — Next batch starts 1st April | Bangalore.\nDM or WhatsApp 9448804902 to join.\n.\n#ChefLife\n#viral\n#StudentSuccess\n#CookingClasses\n#fyp",
+    "ownerFullName": "chef Ismail. Professional culinary training",
+    "ownerUsername": "shuchiruchi_",
+    "url": "https://www.instagram.com/p/DVtQ5vYD5Ux/",
+    "commentsCount": 11,
+    "firstComment": "Sir ಲೊಕೇಶನ್ send me phone ನಂಬರ್ ಕೊಡಿ",
+    "likesCount": 713,
+    "timestamp": "2026-03-10T14:36:07.000Z"
+  },
+  {
+    "caption": "Tradition on the plate, power in the vibe⚡\n.\n\nTurn your passion for cooking into a successful restaurant business.\nSouth Indian culinary training for entrepreneurs — Next batch starts 1st march | Bangalore.\nDM or WhatsApp 9448804902 to join.\n.\n#KantaraVibes\n#viral\n#NaatiStyle\n#CoastalFlavor\n#fyp",
+    "ownerFullName": "chef Ismail. Professional culinary training",
+    "ownerUsername": "shuchiruchi_",
+    "url": "https://www.instagram.com/p/DUz0s-IDxOm/",
+    "commentsCount": 18,
+    "firstComment": "Mashallah",
+    "likesCount": 2397,
+    "timestamp": "2026-02-16T07:06:38.000Z"
+  },
+  {
+    "caption": "If they can cook like this, so can you.\nAdmissions open — learn from the basics, master the art 👨‍🍳🔥\n.\nTurn your passion for cooking into a successful restaurant business.\nSouth Indian culinary training for entrepreneurs — Next batch starts 1st feb | Bangalore.\nDM or WhatsApp 9448804902 to join.\n.\n#CookingClasses\n#StudentTestimonial\n#LearnSouthIndianCooking\n#FromStudentToChef\n#culinaryjourney",
+    "ownerFullName": "chef Ismail. Professional culinary training",
+    "ownerUsername": "shuchiruchi_",
+    "url": "https://www.instagram.com/p/DT2-rnXinM4/",
+    "commentsCount": 5,
+    "firstComment": "रेसिपी पलझ",
+    "likesCount": 201,
+    "timestamp": "2026-01-23T15:59:31.000Z"
+  },
+  {
+    "caption": "Not just cooking… preserving tradition 🙏🍛 Temple-style Puliogare made with love & discipline.\n.\nThis isn’t just food — it’s a skill that changes lives.\n🎓 Culinary Classes starting from Feb 1st\nTurn passion into profession. The kitchen is calling. 🔥\nContact now :  9448804902\n.\n#DosaLove\n#viral \n#SouthIndianCuisine\n#fyp \n#LearnCooking",
+    "ownerFullName": "chef Ismail. Professional culinary training",
+    "ownerUsername": "shuchiruchi_",
+    "url": "https://www.instagram.com/p/DT5kjvSj8ZG/",
+    "commentsCount": 15,
+    "firstComment": "Price sir",
+    "likesCount": 1264,
+    "timestamp": "2026-01-24T16:09:21.000Z"
+  },
+  {
+    "caption": "From airport talks to hot tawas 🔥✈️\nCooking Classes STARTING FEB 1st\nLearn real skills. Cook with confidence. 👨‍🍳✨\n.\n.\nTurn your passion for cooking into a successful restaurant business.\nSouth Indian culinary training for entrepreneurs — Next batch starts 1st feb | Bangalore.\nDM or WhatsApp 9448804902 to join.\n.\n#CookingClasses\n#ChefLife\n#LearnCooking\n#SouthIndianCooking\n#cookingjourney",
+    "ownerFullName": "chef Ismail. Professional culinary training",
+    "ownerUsername": "shuchiruchi_",
+    "url": "https://www.instagram.com/p/DT74YuFD4yZ/",
+    "commentsCount": 11,
+    "firstComment": "🙌🔥🔥🔥congratulations🔥🔥❤️",
+    "likesCount": 408,
+    "timestamp": "2026-01-25T13:43:23.000Z"
+  },
+  {
+    "caption": "These smiles + these words = my biggest success 👏\n.\nLearn. Cook. Create magic.\n.\nTurn your passion for cooking into a successful restaurant business.\nSouth Indian culinary training for entrepreneurs — Next batch starts 1st feb | Bangalore.\nDM or WhatsApp 9448804902 to join.\n.\n#SouthIndianCooking\n#CookingClassesIndia\n#LearnToCook\n#ChefLifeIndia\n#CulinaryTraining",
+    "ownerFullName": "chef Ismail. Professional culinary training",
+    "ownerUsername": "shuchiruchi_",
+    "url": "https://www.instagram.com/p/DT41WuEj36z/",
+    "commentsCount": 4,
+    "firstComment": "Woo my favorite",
+    "likesCount": 306,
+    "timestamp": "2026-01-24T09:17:52.000Z"
+  },
+  {
+    "caption": "South Indian food is not just cooked… it’s mastered.\nFrom crispy dosas to soul-touching sambhar —\nLearn the authentic way from Feb 1st.\nTurn your passion into skill.\nSeats are limited. 🔥🍽️\nLearn. Cook. Create magic.\n.\nTurn your passion for cooking into a successful restaurant business.\nSouth Indian culinary training for entrepreneurs — Next batch starts 1st feb | Bangalore.\nDM or WhatsApp 9448804902 to join.\n.\n#SouthIndianCooking\n#CookingClassesIndia\n#LearnToCook\n#ChefLifeIndia\n#culinarytraining",
+    "ownerFullName": "chef Ismail. Professional culinary training",
+    "ownerUsername": "shuchiruchi_",
+    "url": "https://www.instagram.com/p/DT1wnJ5jWu_/",
+    "commentsCount": 171,
+    "firstComment": "Price",
+    "likesCount": 4306,
+    "timestamp": "2026-01-23T04:37:02.000Z"
+  },
+  {
+    "caption": "When fragrant ghee rice meets rich kurma, every bite feels like a celebration 🤍🔥 Pure South Indian comfort on a plate!\n.\nTurn your passion for cooking into a successful restaurant business.\nSouth Indian culinary training for entrepreneurs — Next batch starts 11th feb | Bangalore.\nDM or WhatsApp 9448804902 to join.\n.\n#GheeRiceLove\n#viral\n#SouthIndianFlavours\n#fyp\n#ComfortFoodVibes",
+    "ownerFullName": "chef Ismail. Professional culinary training",
+    "ownerUsername": "shuchiruchi_",
+    "url": "https://www.instagram.com/p/DUewQz5j0HF/",
+    "commentsCount": 5,
+    "firstComment": "Hi",
+    "likesCount": 471,
+    "timestamp": "2026-02-08T02:42:51.000Z"
+  },
+  {
+    "caption": "I teach cooking, but they take home confidence ❤️🍳\n.\nSeats are limited. 🔥🍽️\nLearn. Cook. Create magic.\n.\nTurn your passion for cooking into a successful restaurant business.\nSouth Indian culinary training for entrepreneurs — Next batch starts 1st feb | Bangalore.\nDM or WhatsApp 9448804902 to join.\n.\n#SouthIndianCooking\n#viral \n#LearnToCook\n#fyp \n#CulinaryTraining",
+    "ownerFullName": "chef Ismail. Professional culinary training",
+    "ownerUsername": "shuchiruchi_",
+    "url": "https://www.instagram.com/p/DT5d0GsD8pV/",
+    "commentsCount": 16,
+    "firstComment": "🙌🙌🙌👏👏👏👏👏",
+    "likesCount": 436,
+    "timestamp": "2026-01-24T15:10:42.000Z"
+  },
+  {
+    "caption": "Not just a Jumbo Sagu Dosa — this is South Indian mastery on a plate. 🥞🔥\nFrom street-style perfection to professional skills — this is what we teach in our cooking institution.\nLearn. Cook. Create magic.\n.\nTurn your passion for cooking into a successful restaurant business.\nSouth Indian culinary training for entrepreneurs — Next batch starts 1st feb | Bangalore.\nDM or WhatsApp 9448804902 to join.\n.\n#JumboSaguDosa\n#SouthIndianCooking\n#CulinaryTraining\n#viral\n#fyp",
+    "ownerFullName": "chef Ismail. Professional culinary training",
+    "ownerUsername": "shuchiruchi_",
+    "url": "https://www.instagram.com/p/DTxmsM7D1_j/",
+    "commentsCount": 12,
+    "firstComment": "Fee details",
+    "likesCount": 1170,
+    "timestamp": "2026-01-21T13:52:59.000Z"
+  },
+  {
+    "caption": "From strangers to family ❤️\nRecipes were taught, memories were baked forever.\n.\nTurn your passion for cooking into a successful restaurant business.\nSouth Indian culinary training for entrepreneurs — Next batch starts 11th feb | Bangalore.\nDM or WhatsApp 9448804902 to join.\n.\n#CookingClassMemories\n#fyp \n#viral\n#CookingJourney\n#foodwithlove",
+    "ownerFullName": "chef Ismail. Professional culinary training",
+    "ownerUsername": "shuchiruchi_",
+    "url": "https://www.instagram.com/p/DUGqyMfkyWK/",
+    "commentsCount": 14,
+    "firstComment": "Address sir",
+    "likesCount": 580,
+    "timestamp": "2026-01-29T18:12:47.000Z"
+  },
+  {
+    "caption": "From the aroma of Pudina Dosa to the soul of Masala Dosa 🤍\nThis isn’t just food — it’s a skill that changes lives.\n🎓 Culinary Classes starting from Feb 1st\nTurn passion into profession. The kitchen is calling. 🔥\nContact now :  9448804902\n.\n#DosaLove\n#CulinaryClasses\n#SouthIndianCuisine\n#FoodReelsIndia\n#learncooking",
+    "ownerFullName": "chef Ismail. Professional culinary training",
+    "ownerUsername": "shuchiruchi_",
+    "url": "https://www.instagram.com/p/DTsjdcYj-9l/",
+    "commentsCount": 79,
+    "firstComment": "Hi online class is available",
+    "likesCount": 5692,
+    "timestamp": "2026-01-19T15:02:11.000Z"
+  },
+  {
+    "caption": "Bulk cooking, authentic taste, unstoppable crunch 💥 Maddur Vada vibes!\n.\nTurn your passion for cooking into a successful restaurant business.\nSouth Indian culinary training for entrepreneurs — Next batch starts 1st feb | Bangalore.\nDM or WhatsApp 9448804902 to join.\n.\n#MaddurVada\n#viral \n#southindiansnacks\n#AuthenticFlavours\n#foodreelsindia",
+    "ownerFullName": "chef Ismail. Professional culinary training",
+    "ownerUsername": "shuchiruchi_",
+    "url": "https://www.instagram.com/p/DUAr4JhD-Ql/",
+    "commentsCount": 30,
+    "firstComment": "hi funtime restaurant bantwal 💐",
+    "likesCount": 2145,
+    "timestamp": "2026-01-27T11:50:48.000Z"
+  },
+  {
+    "caption": "Temple-style vibes, homemade love ❤️ Puliogare supremacy!\n.\n.\nTurn your passion for cooking into a successful restaurant business.\nSouth Indian culinary training for entrepreneurs — Next batch starts 11th Jan | Bangalore.\nDM or WhatsApp 9448804902 to join.\n.\n.\n#Puliogare\n#SouthIndianFood\n#TraditionalFlavours\n#FoodReelsIndia\n#homecookedmagic",
+    "ownerFullName": "chef Ismail. Professional culinary training",
+    "ownerUsername": "shuchiruchi_",
+    "url": "https://www.instagram.com/p/DTcEaVUiIBi/",
+    "commentsCount": 1,
+    "firstComment": "Is it offline or online",
+    "likesCount": 257,
+    "timestamp": "2026-01-13T05:10:15.000Z"
+  },
+  {
+    "caption": "When students speak, success speaks louder 🔥👨‍🍳\nFrom learning to loving it ❤️\nReal voices. Real results. Real cooking academy.\n.\n.\nTurn your passion for cooking into a successful restaurant business.\nSouth Indian culinary training for entrepreneurs — Next batch starts on 15th Jan | Bangalore.\nDM or WhatsApp 9448804902 to join.\n.\n.\n\n#StudentTestimonials\n#CookingAcademyLife\n#FutureChefs\n#LearnCookGrow\n#realfeedback",
+    "ownerFullName": "chef Ismail. Professional culinary training",
+    "ownerUsername": "shuchiruchi_",
+    "url": "https://www.instagram.com/p/DTVaUjPj71J/",
+    "commentsCount": 3,
+    "firstComment": "❤️❤️❤️",
+    "likesCount": 186,
+    "timestamp": "2026-01-10T15:08:04.000Z"
+  },
+  {
+    "caption": "No fancy snacks, just authentic Maddur Vada vibes 💥\n.\n.\nTurn your passion for cooking into a successful restaurant business.\nSouth Indian culinary training for entrepreneurs — Next batch starts 1st FEB | Bangalore.\nDM or WhatsApp 9448804902 to join.\n.\n.\n#MaddurVada\n#SouthIndianSnacks\n#IndianStreetFood\n#FoodReelsIndia\n#snacklovers",
+    "ownerFullName": "chef Ismail. Professional culinary training",
+    "ownerUsername": "shuchiruchi_",
+    "url": "https://www.instagram.com/p/DTfzH-aj1VY/",
+    "commentsCount": 15,
+    "firstComment": "🙌🙌🙌🙌👏👏👏👏👏👏",
+    "likesCount": 4048,
+    "timestamp": "2026-01-14T15:55:41.000Z"
+  },
+  {
+    "caption": "Crispy outside, saucy inside 😮‍🔥 One bite of this Gobi Manchurian and there’s no going back 🔥🍽️\nLimited slots available | new batch starting soon | dm to join!\n.\n.\n#GobiManchurian\n#StreetFoodLovers\n#FoodReelsIndia\n#CrispyVeg\n#viralfood",
+    "ownerFullName": "chef Ismail. Professional culinary training",
+    "ownerUsername": "shuchiruchi_",
+    "url": "https://www.instagram.com/p/DS7zNmdDxye/",
+    "commentsCount": 36,
+    "firstComment": "Plz con no",
+    "likesCount": 2425,
+    "timestamp": "2025-12-31T16:26:20.000Z"
+  },
+  {
+    "caption": "From tawa to testimonial – this dosa got certified! 🧑‍🍳✅\n.\n\nTurn your passion for cooking into a successful restaurant business.\nSouth Indian culinary training for entrepreneurs — Next batch starts 1st march | Bangalore.\nDM or WhatsApp 9448804902 to join.\n.\n#CelebrityChefIsmail\n#viral \n#CookingAcademy\n#StudentReview\n#Fyp",
+    "ownerFullName": "chef Ismail. Professional culinary training",
+    "ownerUsername": "shuchiruchi_",
+    "url": "https://www.instagram.com/p/DUyPB4ej9Nf/",
+    "commentsCount": 8,
+    "firstComment": "Sir hw much ur doing price for ur classes",
+    "likesCount": 639,
+    "timestamp": "2026-02-15T16:52:33.000Z"
+  },
+  {
+    "caption": "From simple tomatoes to a biryani that steals hearts 🍅🔥\nCooking isn’t magic — it’s technique, timing, and passion.\nLearn it the right way at our cooking institution 👨‍🍳✨\n.\nLearn the authentic way from Feb 1st.\nTurn your passion into skill.\nSeats are limited. 🔥🍽️\nLearn. Cook. Create magic.\n.\nTurn your passion for cooking into a successful restaurant business.\nSouth Indian culinary training for entrepreneurs — Next batch starts 1st feb | Bangalore.\nDM or WhatsApp 9448804902 to join.\n.\n#SouthIndianCooking\n#CookingClassesIndia\n#LearnToCook\n#ChefLifeIndia\n#CulinaryTraining",
+    "ownerFullName": "chef Ismail. Professional culinary training",
+    "ownerUsername": "shuchiruchi_",
+    "url": "https://www.instagram.com/p/DT22Aloj_A5/",
+    "commentsCount": 7,
+    "firstComment": "Sir please let me recipe. Recipe ಹೇಳಿಕೊಡಿ sir ನಾವು ನಮ್ಮ ಮನೇಲೇ madkoteevi",
+    "likesCount": 573,
+    "timestamp": "2026-01-23T14:45:27.000Z"
+  },
+  {
+    "caption": "Hot ghee dripping 🤤 + pudi packed with flavour 💥 = pure South Indian soul on a plate!\nOne bite is enough to make you fall in love 😍🧈\n.\n.\nTurn your passion for cooking into a successful restaurant business.\nSouth Indian culinary training for entrepreneurs — Next batch starts on 15th Jan | Bangalore.\nDM or WhatsApp 9448804902 to join.\n.\n.\n#GheePudiIdli\n#SouthIndianFlavours\n#FoodReelIndia\n#DesiComfortFood\n#reelitfeelit",
+    "ownerFullName": "chef Ismail. Professional culinary training",
+    "ownerUsername": "shuchiruchi_",
+    "url": "https://www.instagram.com/p/DTVXJVbj5aC/",
+    "commentsCount": 7,
+    "firstComment": "😢😢",
+    "likesCount": 435,
+    "timestamp": "2026-01-10T14:39:05.000Z"
+  },
+  {
+    "caption": "Crispy edges, soft centre & dripping ghee 🤤 — this is not food, it’s emotion! \n\n.Hands-on, step-by-step cooking classes designed for real home kitchens 🍳\nBeginner-friendly, no-fail recipes using simple ingredients — learn practical techniques and cook with confidence.\nFrom basics to beautifully plated dishes, this is restaurant -style cooking you’ll actually use.\n\n📩 DM to join | Limited slots | New batch starting\n\n#CookingClasses #LearnToCook #HomeCooking #HandsOnCooking #KitchenConfidence #BeginnerCooking #HomeChefLife #EasyCooking #EverydayCooking #CookingReels #FoodReels #InstaFood #bangaloreFood #CookingClassesInbangalore\n#GheeSetDosa\n#SouthIndianFood\n#DosaLove\n#FoodReelsIndia\n#instafoodie",
+    "ownerFullName": "chef Ismail. Professional culinary training",
+    "ownerUsername": "shuchiruchi_",
+    "url": "https://www.instagram.com/p/DS5ADNID32_/",
+    "commentsCount": 111,
+    "firstComment": "Thats the hand with expertise 👏",
+    "likesCount": 16382,
+    "timestamp": "2025-12-30T14:31:22.000Z"
+  },
+  {
+    "caption": "When rice, dal & spices decide to throw a party – Bisi Bele Bath happens 😮‍🔥\n.\n\nTurn your passion for cooking into a successful restaurant business.\nSouth Indian culinary training for entrepreneurs — Next batch starts 1st April | Bangalore.\nDM or WhatsApp 9448804902 to join.\n.\n#bisibelebath #viral #karnatakafood #foodreels #fyp",
+    "ownerFullName": "chef Ismail. Professional culinary training",
+    "ownerUsername": "shuchiruchi_",
+    "url": "https://www.instagram.com/p/DVh7EmRkoms/",
+    "commentsCount": 24,
+    "firstComment": "I would like to join your class",
+    "likesCount": 4315,
+    "timestamp": "2026-03-06T08:29:33.000Z"
+  },
+  {
+    "caption": "From tradition to taste ❤️\nSankranthi the way it’s meant to be — slow cooked, soul filled & celebrated together 🌾🔥.\n.\nTurn your passion for cooking into a successful restaurant business.\nSouth Indian culinary training for entrepreneurs — Next batch starts 1st February | Bangalore.\nDM or WhatsApp 9448804902 to join.\n.\n#SankranthiSpecial \n#TraditionalCooking \n#SouthIndianFood \n#foodreelsindia \n#CookingInstitute",
+    "ownerFullName": "chef Ismail. Professional culinary training",
+    "ownerUsername": "shuchiruchi_",
+    "url": "https://www.instagram.com/p/DTjWcCik_wQ/",
+    "commentsCount": 14,
+    "firstComment": "👏👏👏👏👏",
+    "likesCount": 982,
+    "timestamp": "2026-01-16T01:00:00.000Z"
+  },
+  {
+    "caption": "Fragrance of spices, taste of the South 😌🔥\n.\n.\n#SouthIndianFood\n#PulaoLove\n#FoodReelsIndia\n#IndianFoodLovers\n#reelstrending",
+    "ownerFullName": "chef Ismail. Professional culinary training",
+    "ownerUsername": "shuchiruchi_",
+    "url": "https://www.instagram.com/p/DS14t7xD9aE/",
+    "commentsCount": 14,
+    "firstComment": "Sir how do we contact you?",
+    "likesCount": 643,
+    "timestamp": "2025-12-29T09:19:29.000Z"
+  },
+  {
+    "caption": "Throwback to when I Recieved an award for excellence in vegetarian cuisine for the year 2020 🥂🙏",
+    "ownerFullName": "chef Ismail. Professional culinary training",
+    "ownerUsername": "shuchiruchi_",
+    "url": "https://www.instagram.com/p/CbvZOi8Avhi/",
+    "commentsCount": 4,
+    "firstComment": "👏🙌",
+    "likesCount": 40,
+    "timestamp": "2022-03-30T19:57:51.000Z"
+  },
+  {
+    "caption": "Har dum mein khushboo, har bite mein sukoon 🍄✨\n.\n.\nTurn your passion for cooking into a successful restaurant business.\nSouth Indian culinary training for entrepreneurs — Next batch starts 11th Jan | Bangalore.\nDM or WhatsApp 9448804902 to join.\n\n#MushroomDumBiryani\n#VegBiryaniLove\n#BiryaniOnDum\n#FoodReelsIndia\n#desifood",
+    "ownerFullName": "chef Ismail. Professional culinary training",
+    "ownerUsername": "shuchiruchi_",
+    "url": "https://www.instagram.com/p/DTPg0GVjyBl/",
+    "commentsCount": 9,
+    "firstComment": "Sir ap price kyu nahi bata rahe Hain mujhe classes karna hai Apke WhatsApp par bhi msg kiya koi reply nahi he",
+    "likesCount": 515,
+    "timestamp": "2026-01-08T08:09:01.000Z"
+  },
+  {
+    "caption": "Have a dream of opening your own restaurant? 🍽️\nStart your journey with Chef Ismail, who brings 25 years of rich South Indian culinary experience straight into the kitchen.\n\n✨ Learn through live, hands-on cooking classes\n✨ Master South Indian & Chinese cuisines\n✨ Train at our work kitchen in Bangalore\n✨ Prefer personal guidance? Get trained at your own restaurant too\n\nThis is more than a class — it’s real kitchen learning for real restaurant success.\n\n📞 Call / WhatsApp: 9448804902\n📩 DM us to get started\n\n#ChefIsmail\n#CulinaryTraining\n#CookingClassesBangalore\n#BangaloreFoodCommunity\n#RestaurantDreams#FoodBusinessIndia\n#AspiringRestaurateur#SouthIndianCuisine#ChineseCuisine#HandsOnCooking\n#LiveCookingClasses#ChefMentorship\n#RestaurantTrainingIndia#KitchenToBusiness\n#FoodEntrepreneurIndia#InstaFoodIndia#CookingReels",
+    "ownerFullName": "chef Ismail. Professional culinary training",
+    "ownerUsername": "shuchiruchi_",
+    "url": "https://www.instagram.com/p/DSr3p15DxhV/",
+    "commentsCount": 13,
+    "firstComment": "Fees what is the cost sir",
+    "likesCount": 526,
+    "timestamp": "2025-12-25T11:56:53.000Z"
+  },
+  {
+    "caption": "✔️ Live, hands-on cooking classes\n✔️ South Indian & Chinese cuisines\n✔️ Restaurant-style techniques & kitchen workflow\n✔️ Guidance specially for aspiring restaurant owners\n\nLearn directly from Chef Ismail, with 25 years of hands-on experience in South Indian culinary arts.\n\nTurn your passion into a restaurant business.\n\nFor more details and enrollments \ncontact: 9448804902\n\n#ChefIsmail\n#CulinaryExpert\n#25YearsExperience\n#SouthIndianChef\n#CulinaryClasses\n#CookingClassesIndia\n#RestaurantTraining\n#FoodBusiness\n#AspiringChef\n#HandsOnCooking\n#LiveCookingClass\n#SouthIndianCuisine\n#ChineseCuisine\n#ChefTraining\n#FoodEntrepreneur\n#RestaurantStartup\n#KitchenSkills\n#InstaFoodIndia\n#CookingReels\n#Foodpreneurs",
+    "ownerFullName": "chef Ismail. Professional culinary training",
+    "ownerUsername": "shuchiruchi_",
+    "url": "https://www.instagram.com/p/DSkduOSD4QO/",
+    "commentsCount": 8,
+    "firstComment": "Super fantastic",
+    "likesCount": 295,
+    "timestamp": "2025-12-22T14:52:28.000Z"
+  },
+  {
+    "caption": "Dreaming of opening your own restaurant? 🍽️\nTrain with Chef Ismail, a culinary expert with 25 years of South Indian cooking experience.\n\n✔️ Live, hands-on culinary classes\n✔️ South Indian & Chinese cuisines\n✔️ Restaurant-style techniques & kitchen management\n✔️ Training at our work kitchen in Bangalore\n✔️ Personal training available at your own restaurant\n\nPerfect for aspiring chefs & future restaurant owners.\n📩 DM now to enroll | Limited seats available\n\n##ChefIsmail#BangaloreChefs\n#BangaloreFoodies#CookingClassesBangalore\n#CulinaryClassesIndia#RestaurantTraining\n#FoodBusinessIndia#AspiringChef\n#SouthIndianCuisine#ChineseCuisine#HandsOnCooking#LiveCookingClass#ChefTraining\n#RestaurantStartup\n#PersonalChefTraining#KitchenSkill\n#FoodEntrepreneur#instafoodindia#CookingReels\n#Foodpreneurs",
+    "ownerFullName": "chef Ismail. Professional culinary training",
+    "ownerUsername": "shuchiruchi_",
+    "url": "https://www.instagram.com/p/DSr20ABjxwE/",
+    "commentsCount": 10,
+    "firstComment": "😍👏👏🔥",
+    "likesCount": 286,
+    "timestamp": "2025-12-25T11:51:44.000Z"
+  },
+  {
+    "caption": "Soft, fluffy & straight from a South Indian kitchen 🤍\nRava idly that feels like home in every bite.\n.\nTurn your passion for cooking into a successful restaurant business.\nSouth Indian culinary training for entrepreneurs — Next batch starts 11th feb | Bangalore.\nDM or WhatsApp 9448804902 to join.\n.\n#RavaIdly\n#SouthIndianFood\n#viral \n#HomelyFood\n#FoodReelsIndia",
+    "ownerFullName": "chef Ismail. Professional culinary training",
+    "ownerUsername": "shuchiruchi_",
+    "url": "https://www.instagram.com/p/DUFi-g-jx15/",
+    "commentsCount": 69,
+    "firstComment": "Details of the class",
+    "likesCount": 11293,
+    "timestamp": "2026-01-29T07:51:55.000Z"
+  },
+  {
+    "caption": "From our roots to your feed 🌾🔥\nSoft, smoky, soulful — ragi dosa made the traditional way.\nHealthy never tasted this powerful 💪✨\n.\n.\n.\n#Ragidosa\n#MilletMagic\n#DesiSuperfood\n#HealthyIndianFood\n#foodreelsindia",
+    "ownerFullName": "chef Ismail. Professional culinary training",
+    "ownerUsername": "shuchiruchi_",
+    "url": "https://www.instagram.com/p/DTApY3_jy44/",
+    "commentsCount": 8,
+    "firstComment": "Recipe sir",
+    "likesCount": 337,
+    "timestamp": "2026-01-02T13:38:06.000Z"
+  },
+  {
+    "caption": "Dreaming of opening your own\nrestaurant? 🍽️ \n\nTrain with Chef Ismail, a culinary expert with 25 years of South Indian cooking experience.\n\n✔️Live, hands-on culinary classes \n✔️South Indian & Chinese cuisines\n✔️Restaurant-style techniques & kitchen management\n✔️Training at our work kitchen in Bangalore\n✔️Personal training available at your own restaurant\n\nPerfect for aspiring chefs & future restaurant owners.\n💌 DM now to enroll | Limited seats available\n\n#masaladosa #viral \n#bangalorefoodies #reelsindia #fyp",
+    "ownerFullName": "chef Ismail. Professional culinary training",
+    "ownerUsername": "shuchiruchi_",
+    "url": "https://www.instagram.com/p/DSwM-_eDyUV/",
+    "commentsCount": 35,
+    "firstComment": "Chef required",
+    "likesCount": 606,
+    "timestamp": "2025-12-27T04:23:22.000Z"
+  },
+  {
+    "caption": "shuchiruchi_\n_ When humble bread meets South Indian\nmasala\nBread Pulao done right!\nTurn your passion for cooking into a successful restaurant business.\nSouth Indian culinary training for entrepreneurs - Next batch starts 1st feb | Bangalore.\nDM or WhatsApp 9448804902 to join.\n.\n#BreadPulao\n#viral \n#fyp \n#southindian \n#reelsinstagram",
+    "ownerFullName": "chef Ismail. Professional culinary training",
+    "ownerUsername": "shuchiruchi_",
+    "url": "https://www.instagram.com/p/DTmpxSgD4yp/",
+    "commentsCount": 5,
+    "firstComment": "What's up it's showing atomic msg only we are disappointed Sir 😔",
+    "likesCount": 846,
+    "timestamp": "2026-01-17T07:50:45.000Z"
+  }
+]
